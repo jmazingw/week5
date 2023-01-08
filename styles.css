@@ -65,7 +65,7 @@
     top: 0;
     box-sizing: border-box;
     border-radius: 50%;
-    animation: wave 1.5s infinite linear;
+    animation: wave 1.0s infinite linear;
   }
   
   @keyframes wave {
@@ -84,7 +84,8 @@
   .name{
     color: #f1f1f1;
     font-size: 28px;
-    letter-spacing: 2px;
+    font-weight: bold;
+    letter-spacing: 1px;
     text-transform: uppercase;
   }
   
