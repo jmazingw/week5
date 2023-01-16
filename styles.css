@@ -155,3 +155,29 @@
     transform: scale(1.4);
     opacity: 0;
   }
+
+  .notification-dot{
+    position: relative;
+ }
+ .notification-dot::after{
+    content: "";
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+ }
+ #notification-id{
+   position: fixed;
+   top: 40px;
+   right: 20px;
+   padding: 10px;
+   background-color: #f1f1f1;
+   border: 1px solid #ccc;
+   font-size: 14px;
+   z-index: 9999;
+   display: none;
+ }
+ 

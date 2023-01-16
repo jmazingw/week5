@@ -8,10 +8,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
   </head>
   <body>
+    <script>setTimeout(function() {
+      var icon = document.querySelector("#icon-id");
+      var notification = document.querySelector("#notification-id");
+      icon.classList.add("notification-dot");
+      icon.addEventListener("click", function() {
+         if(notification.style.display === "block"){
+           notification.style.display = "none";
+         }else{
+           notification.style.display = "block";
+         }
+      });
+   }, 60000);
+   </script>
     <div class="profile-card">
       <div class="top-section">
         <a href="http://apcwebprog.csf.ph/~jdgonzales2/week5/resources.html" target="_self"><i class="message fas fa-search"></i></a>
-        <i class="notif fas fa-bell"></i>
+        <i id="icon-id" class="notif fas fa-bell"></i>
+        <div id="notification-id">You have been on this site for 1 minute!</div>
         <div class="pic">
           <img src="ako.png" alt="Your handsome boy">
         </div>
