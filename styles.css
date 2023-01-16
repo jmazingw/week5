@@ -28,7 +28,7 @@
     background: #0081C9;
   }
   
-  .message,.notif{
+  .message{
     position: absolute;
     top: 40px;
     font-size: 20px;
@@ -39,10 +39,40 @@
   .message{
     right: 40px;
   }
-  
+
   .notif{
+    position: absolute;
+    top: 40px;
     left: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #ffffff;
   }
+  
+  .notification-dot{
+    position: absolute;
+ }
+ .notification-dot::after{
+    content: "";
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+ }
+ #notification-id{
+   position: absolute;
+   top: 60px;
+   left: 0px;
+   padding: 10px;
+   background-color: #f1f1f1;
+   border: 1px solid #ccc;
+   font-size: 14px;
+   z-index: 9999;
+   display: none;
+ }
   
   .pic{
     width: 150px;
@@ -155,29 +185,4 @@
     transform: scale(1.4);
     opacity: 0;
   }
-
-  .notification-dot{
-    position: relative;
- }
- .notification-dot::after{
-    content: "";
-    position: absolute;
-    top: -4px;
-    right: -4px;
-    width: 8px;
-    height: 8px;
-    background-color: red;
-    border-radius: 50%;
- }
- #notification-id{
-   position: fixed;
-   top: 40px;
-   right: 20px;
-   padding: 10px;
-   background-color: #f1f1f1;
-   border: 1px solid #ccc;
-   font-size: 14px;
-   z-index: 9999;
-   display: none;
- }
  
