@@ -23,6 +23,10 @@
     box-shadow: 0 0 10px #00000070;
   }
   
+  #video-container {
+    display: none;
+  }  
+
   .top-section{
     padding: 60px 40px;
     background: #0081C9;
