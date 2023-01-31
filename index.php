@@ -55,6 +55,17 @@
         <div id="video-container" style="display:none">
         <iframe width="420" height="315" src="https://www.youtube.com/embed/videoseries?list=PLkrzfEDjeYJl6PPdoA-7_SNea5ORS9hPh" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
+        <form action="submit.php" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required><br><br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required><br><br>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea><br><br>
+          <label for="class_section">Class Section:</label>
+          <input type="text" id="class_section" name="class_section" required><br><br>
+          <input type="submit" value="Submit">
+        </form>
         <script>
           var revealButton = document.getElementById('reveal-button');
           var videoContainer = document.getElementById('video-container');
