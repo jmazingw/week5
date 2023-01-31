@@ -5,6 +5,7 @@
     // redirect to previous page
     header("Location: " . $_SERVER['HTTP_REFERER']);
     exit;
+  
   } else {
     // show error message
     echo "Invalid request";
@@ -22,7 +23,7 @@
   }
 
   // send the email
-  $to = "recipient@example.com";
+  $to = "johnmichaelg135@gmail.com";
   $subject = "Form Submission from $name";
   $body = "Name: $name\nEmail: $email\nMessage: $message\nClass Section: $class_section";
   $headers = "From: $email\r\n";
