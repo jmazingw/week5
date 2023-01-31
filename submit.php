@@ -1,11 +1,15 @@
 <?php
-  // prevent cross-site request forgery (CSRF) attacks
-  if (!isset($_POST["submit"]) || !hash_equals($_SESSION["token"], $_POST["token"])) {
-    echo "Invalid request";
+  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // process form data
+    
+    // redirect to previous page
+    header("Location: " . $_SERVER['HTTP_REFERER']);
     exit;
+  } else {
+    // show error message
+    echo "Invalid request";
   }
-
-  // validate inputs
+// validate inputs
   $name = filter_var($_POST["name"], FILTER_SANITIZE_STRING);
   $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
   $message = filter_var($_POST["message"], FILTER_SANITIZE_STRING);
@@ -18,7 +22,7 @@
   }
 
   // send the email
-  $to = "johnmichaelg135@gmail.com";
+  $to = "recipient@example.com";
   $subject = "Form Submission from $name";
   $body = "Name: $name\nEmail: $email\nMessage: $message\nClass Section: $class_section";
   $headers = "From: $email\r\n";
