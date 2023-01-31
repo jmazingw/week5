@@ -1,15 +1,15 @@
 <?php
-  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  //if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // process form data
     
     // redirect to previous page
-    header("Location: " . $_SERVER['HTTP_REFERER']);
-    exit;
+    //header("Location: " . $_SERVER['HTTP_REFERER']);
+    //exit;
   
-  } else {
+  //} else {
     // show error message
-    echo "Invalid request";
-  }
+   // echo "Invalid request";
+  //}
 // validate inputs
   $name = filter_var($_POST["name"], FILTER_SANITIZE_STRING);
   $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
